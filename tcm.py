@@ -5,6 +5,15 @@ import requests
 import sys
 import time
 
+# Personally I like to have a Discord Webhook fire when my match actually starts.
+# Read more about that here: https://gist.github.com/Bilka2/5dd2ca2b6e9f3573e0c2defe5d3031b2
+url = "https://discord.com/api/webhooks/1188217451549294664/Z9YXQNKd1SVaOZPkv4DNcHT78Ht_otc6R0f3irT7uCk_-zOix7qRRVukZoNU-F1yTYVi"
+
+data = {
+    "content" : "OMG I can't believe it, you're actually starting a match!",
+    "username" : "TCMLobbyBBQ says:"
+    }
+    
 # pyautogui has a failsafe that, when enabled, will NOT take pyautogui actions if your mouse is in the corner of the screen.
 # I personally don't care about this so I'm setting it to 'False'.  If you're having issues, set to 'True.'
 pyautogui.FAILSAFE = False
@@ -177,11 +186,7 @@ while True:
         print("Good luck!")
         print("")
         time.sleep(2)
-        
-        result = requests.post(url, json = data)
-        result.raise_for_status()
-        #break
-        time.sleep(200)
+        time.sleep(60)
    
     except pyautogui.ImageNotFoundException:
         print("Huh, you don't seem to be waiting in a lobby.")
@@ -197,6 +202,22 @@ while True:
         
     except pyautogui.ImageNotFoundException:
         print("Bizarre.  You didn't seem to have a network error, so what the heck is happening?")
+        print("Moving on to see if you're somewhere else...")
+        print("")
+        time.sleep(1)
+        
+    try:
+        pyautogui.locateOnScreen('pics/matchstart.jpg', confidence=0.8)
+        print("Your match is about to start!!!!!")
+        print("Good luck!")
+        print("")
+        result = requests.post(url, json = data)
+        result.raise_for_status()
+        #break
+        time.sleep(200)
+   
+    except pyautogui.ImageNotFoundException:
+        print("Huh, you don't seem to be waiting in a lobby.")
         print("Moving on to see if you're somewhere else...")
         print("")
         time.sleep(1)
