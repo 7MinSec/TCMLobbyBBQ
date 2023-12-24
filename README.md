@@ -13,11 +13,10 @@ Because if you're a fan of the game, you know one or more of the following can h
 
 # Under construction
 Gotta talk about pre-reqs, which might include...
-# pip install opencv-python
-# pip install pyautogui
-# pip install pillow
-# pip install requests 
+pip install opencv-python
+pip install pyautogui
+pip install pillow
+pip install requests 
 
 
-
-asdfasdf
+More explanatory stuff here:
