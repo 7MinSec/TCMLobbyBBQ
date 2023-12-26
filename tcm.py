@@ -1,4 +1,9 @@
-# Import all the necessary python stuff
+# TCMLobbyBBQ v1.0
+# by 7 Minute Security (https://7minsec.com)
+# A tool for making it more efficient to get into Texas Chain Saw Massacre games that ACTUALLY start
+
+
+# Import all the necessary python pre-reqs
 import argparse
 import pyautogui
 import requests 
@@ -9,10 +14,18 @@ import time
 # Read more about that here: https://gist.github.com/Bilka2/5dd2ca2b6e9f3573e0c2defe5d3031b2
 url = "https://discord.com/api/webhooks/1188217451549294664/Z9YXQNKd1SVaOZPkv4DNcHT78Ht_otc6R0f3irT7uCk_-zOix7qRRVukZoNU-F1yTYVi"
 
-data = {
+
+ana = {
+    "content" : "Lobby started and you are...!",
+    "username" : "Playing as Ana!"
+    }
+
+matchstart = {
     "content" : "OMG I can't believe it, you're actually starting a match!",
     "username" : "TCMLobbyBBQ says:"
     }
+    
+    
     
 # pyautogui has a failsafe that, when enabled, will NOT take pyautogui actions if your mouse is in the corner of the screen.
 # I personally don't care about this so I'm setting it to 'False'.  If you're having issues, set to 'True.'
@@ -32,41 +45,23 @@ chosen_option = None
 # Process the user's choice
 if user_input == "1":
     chosen_option = "family"
-    print(f"You chose: {chosen_option}")
+    print(f"You chose: {chosen_option}! - kill leland first OK?  He's annoying.")
 elif user_input == "2":
     chosen_option = "victim"
-    print(f"You chose: {chosen_option}")
+    print(f"You chose: {chosen_option}! - Danny is P2W FTW, amirite?")
 else:
     print("Ehhhh...that's not a valid choice. Please enter 1 or 2.")
     sys.exit(1)  # Exit the script with an error code
 
 
 # Here's where the script actually starts doing stuff
-print("Ok the TCMLobbySimBBQ is about to begin!")
+print("Ok the TCMLobbyBBQ is about to begin!")
 print("")
-
-# Helping you choose either family or victim
-#while True:
-#    fov = input("What do you want to play as today?  Please type 'family' or 'victim' without quotes:").lower()
-#    if fov == "family":
-#        print("You chose family.  Kill Leland first please LOL.\n")
-#        break
-#    
-#
-#    elif fov == "victim":
-#        print("Victims!  Danny is P2W FTW, amirite?! Go tamper those valves and fuse boxes, amirite?")
-#        print("")
-#        break
-#
-#    else:
-#        print("You fat-fingered something.  Please type 'family' or 'victim'")
-#        print("")
-
-print("Ok, this is important!")
 print("Make sure that TCM is running, and that your mouse is actively 'clicked' on the monitor where TCM is running.")
 print("Otherwise basically none of this will work.")
-print("I'll give you 5 seconds to do that, then I'm starting automatically!")
+print("I'll give you 7 seconds to do that, then I'm starting automatically!")
 print("")
+time.sleep(7)
 
 while True:
 
@@ -78,7 +73,7 @@ while True:
         pyautogui.press('e')
         time.sleep(5)
         print("Pressing E again to get past the cool voiceover.")
-        print("Love it but heard it a bunch LOL.")
+        print("Love it but you've probably heard it a bunch LOL.")
         pyautogui.press('e')
 
     except pyautogui.ImageNotFoundException:
@@ -185,8 +180,7 @@ while True:
         print("Oh cool!  Looks like you're in a lobby.")
         print("Good luck!")
         print("")
-        time.sleep(2)
-        time.sleep(60)
+        time.sleep(5)
    
     except pyautogui.ImageNotFoundException:
         print("Huh, you don't seem to be waiting in a lobby.")
@@ -211,7 +205,7 @@ while True:
         print("Your match is about to start!!!!!")
         print("Good luck!")
         print("")
-        result = requests.post(url, json = data)
+        result = requests.post(url, json = matchstart)
         result.raise_for_status()
         #break
         time.sleep(200)
@@ -219,5 +213,21 @@ while True:
     except pyautogui.ImageNotFoundException:
         print("Huh, you don't seem to be waiting in a lobby.")
         print("Moving on to see if you're somewhere else...")
+        print("")
+        time.sleep(1)
+        
+    try:
+        pyautogui.locateOnScreen('pics/ana.jpg', confidence=0.8)
+        print("You will be playing as Ana")
+        print("Good luck!")
+        print("")
+        result = requests.post(url, json = ana)
+        result.raise_for_status()
+        #break
+        time.sleep(30)
+        
+    except pyautogui.ImageNotFoundException:
+        print("You're not playing as Ana.")
+        print("Maybe you're playing as somone else?")
         print("")
         time.sleep(1)
