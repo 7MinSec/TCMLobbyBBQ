@@ -39,13 +39,38 @@ Great!  Raise an [issue](https://github.com/7MinSec/TCMLobbyBBQ/issues) or do co
 We're not reponsible at all for anything that happens - be it good, bad or indifferent - to your computer as a result of running this code
 
 ## OK I like to live dangerously like Austin Powers.  What do I do next?
-Install the pre-reqs:
+
+### Install the pre-reqs:
 * Python (this script was tested on 3.10.11.  No idea if it will work on other versions)
 * Python pre-reqs:
 
 ```
 pip install opencv-python
 pip install pyautogui
+pip install python-dotenv
 pip install pillow
 pip install requests 
 ```
+
+### (Optional) Create an .env file
+Personally, we like to use Webhooks to alert us when certain actions in TCM happen. 
+If you want to do this, create a file called `.env` in the same directory as `tcm.py` with a line like this:
+
+```
+WEBHOOK_URL="https://discord.com/api/webhooks/xxx"
+```
+
+### (Optional) Edit tcm.py
+Take a look through the script and tweak the timeouts and alerts to your liking!
+
+### Run tcm.py!
+From a command prompt, run:
+
+```
+python tcm.py
+```
+
+You will be prompted to choose either `Family` or `Victim`.  Depending on which one you choose, `tcm.py` will automatically watch the screens of your TCM game and navigate the menus automatically to queue you in the appropriate lobby.
+
+# Something's broken and/or I have some suggestions to make this script better
+Great!  Raise an [issue](https://github.com/7MinSec/TCMLobbyBBQ/issues) and let's do this!
