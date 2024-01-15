@@ -47,15 +47,17 @@ Sure, once you run `tcm.py` and choose whether you want to play as victim or fam
 8. **"OMg did you actually wait in a lobby and then the match ACTUALLY started (`pics/matchstart.jpg`)?** Congrats!  You should get a Webhook alert saying your match will begin shortly (again, be sure to set the Webhook in the `.env` file!)  
 ![](pics/matchstart.jpg)
 
-## This Python code looks like a baby wrote it
+# Common questions/comments
+## LOL!  This Python code looks like a baby wrote it!
 Be gentle.  We don't code *at all* and gave it our best shot, mom.
 
 ## This script blew up my computer, deleted all my files and made me miss a mortgage payment!
 We're not reponsible at all for anything that happens - be it good, bad or indifferent - to your computer as a result of running this code.  Correction: if you win the lottery because of this script, we get half.
 
 ## OK I like to live dangerously like Austin Powers.  What do I do next?
-This should get you started:
+Follow the install instructions below:
 
+# Installation
 ### Install the pre-reqs:
 * Install [Python](https://www.python.org/downloads/windows/).  This script was tested on 3.10.11.  No idea if it will work on other versions!
 * Install Python pre-reqs by running these commands at a command prompt:
@@ -68,7 +70,7 @@ pip install python-dotenv
 pip install requests 
 ```
 
-### (Optional) Create an .env file
+## (Optional) Create an .env file
 Personally, we like to use Discord Webhooks to alert us when certain actions in TCM happen. Not sure how to configure those?  [Read this](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
 If you want to do this, create a file called `.env` in the same directory as `tcm.py` with a line like this:
 
@@ -78,10 +80,10 @@ WEBHOOK_URL="https://discord.com/api/webhooks/xxx"
 
 Hint: look at the included `.env.example` file in this repo.
 
-### (Optional) Edit tcm.py for max fun!
+## (Optional) Edit tcm.py for max fun!
 Take a look through the script and tweak the timeouts and alerts to your liking!
 
-### Run tcm.py!
+## Run tcm.py!
 From a command prompt, run:
 
 ```
@@ -92,5 +94,5 @@ You will be prompted to choose either `Family` or `Victim`.  Depending on which 
 
 ---
 
-# Something's broken and/or I can make tcm.py better!
+# Something's broken and/or I can help make tcm.py better!
 Great!  Raise an [issue](https://github.com/7MinSec/TCMLobbyBBQ/issues) and let's talk about it!
