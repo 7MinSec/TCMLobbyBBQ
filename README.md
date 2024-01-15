@@ -71,7 +71,7 @@ Sure, once you run `tcm.py` and choose whether you want to play as victim or fam
 3. **"Are you at the main menu (`pics/mainmenu.jpg`)?"** If so, the script will hit `Up` a bunch of times and then `E` to continue.  
 ![](pics/mainmenu.jpg)
 
-4. **"Are you at the "windmill" screen ready to pick family or victims(`pics/windmill.jpg`)?**  If so, the script will press `Up` a bunch of times to get to the top of the menu, and then `Down` the appropriate amount of times for either family or victim.  
+4. **"Are you at the "windmill" screen ready to pick family or victims(`pics/windmill.jpg`)?**  If so, the script will press `Up` a bunch of times to get to the top of the menu, and then `Down` the appropriate amount of times for either family or victim, then hit `Enter`.  
 ![](pics/windmill.jpg)
 
 5. **"Are you in an active lobby (`pics/lobby.jpg`)?**  If so, that's awesome!  The script will just sleep for a bit.  
