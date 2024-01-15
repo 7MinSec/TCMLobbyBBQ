@@ -26,13 +26,13 @@ Sure, once you run `tcm.py` and choose whether you want to play as victim or fam
 1. **"Are you at the 'Auto Save' screen (`/pics/autosave.jpg`)?"**  If so, the script will press `E` to move you on to the next screen.  Then it will pause 5 seconds and press `E` again to move past the voiceover stuff.  
 ![](pics/autosave.jpg)
 
-2. **"Are you at the main TCM splash screen (`pics/thetexastcm.jpg`)?"**  If so, the script will press `E` to continue.  
-![](pics/thetexastcm.jpg)
+2. **"Are you at the main TCM splash screen (`pics/thetexascsm.jpg`)?"**  If so, the script will press `E` to continue.  
+![](pics/thetexascsm.jpg)
 
 3. **"Are you at the main menu (`pics/mainmenu.jpg`)?"** If so, the script will hit `Up` a bunch of times and then `E` to continue.  
 ![](pics/mainmenu.jpg)
 
-4. **"Are you at the "windmill" screen ready to pick family or victims(`pics/windmill.jpg`)?**  If so, the script will press `Up` a bunch of times to get to the top of the menu, and then `Down` the appropriate amount of times for either family or victim.
+4. **"Are you at the "windmill" screen ready to pick family or victims(`pics/windmill.jpg`)?**  If so, the script will press `Up` a bunch of times to get to the top of the menu, and then `Down` the appropriate amount of times for either family or victim.  
 ![](pics/windmill.jpg)
 
 5. **"Are you in an active lobby (`pics/lobby.jpg`)?**  If so, that's awesome!  The script will just sleep for a bit.  
