@@ -11,6 +11,6 @@ Wish list:
 * [Stop the script once a match actually starts](https://github.com/7MinSec/TCMLobbyBBQ/issues/12)
 * [Add ability to email a screenshot of lobby once you land in it](https://github.com/7MinSec/TCMLobbyBBQ/issues/13)
 
-## v1.0 release! - January 15, 2024
+## v1.0 release! - January 16, 2024
 * Core code released!
 * Lots of stuff probably broken!
