@@ -80,7 +80,7 @@ Sure, once you run `tcm.py` and choose whether you want to play as victim or fam
 6. **"Were you in an active lobby and then the time ran out (`pics/unabletofindsuitableplayers.jpg`)?"** The script will press `E` to get you back in action.  
 ![](pics/unabletofindsuitableplayers.jpg)
 
-7. **"What character are you?"** The script will look in the `/pics` folder and try to match the character you've been matched with - then alert you about who that character is via Webhook (be sure to set the Webhook in the `.env` file!)  
+7. **"What character are you?"** The script will look in the `/pics` folder and try to match the character you've been matched with (still working on getting pics of all characters, this will be done for v1.1 of the script) - then alert you about who that character is via Webhook (be sure to set the Webhook in the `.env` file!)  
 ![](pics/leland.jpg)
 
 8. **"OMg did you actually wait in a lobby and then the match ACTUALLY started (`pics/matchstart.jpg`)?** Congrats!  You should get a Webhook alert saying your match will begin shortly (again, be sure to set the Webhook in the `.env` file!)  
