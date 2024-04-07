@@ -1,4 +1,4 @@
-# TCMLobbyBBQ - v1.0
+# TCMLobbyBBQ - v1.1
 A script for Texas Chains Saw Massacre *PC players* to use to automatically join the queue again after lobby timeouts, network errors, etc.
 
 # Installation
