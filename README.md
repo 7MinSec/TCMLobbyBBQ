@@ -1,6 +1,11 @@
 # TCMLobbyBBQ - v1.1
 A script for Texas Chains Saw Massacre *PC players* to use to automatically join the queue again after lobby timeouts, network errors, etc.
 
+# WARNING!
+We've learned the tool has issues if you are not running at 2560x1440 resolution.  We're [working on it](https://github.com/7MinSec/TCMLobbyBBQ/issues/15).
+
+---
+
 # Installation
 ### Install the pre-reqs:
 * Install [Python](https://www.python.org/downloads/windows/).  This script was tested on 3.10.11.  No idea if it will work on other versions!
@@ -13,6 +18,16 @@ pip install pyautogui
 pip install python-dotenv
 pip install requests 
 ```
+## Download the TCMLobbyBBQ .zip file
+1. From the main tool page, click **Code > Download ZIP**.  
+2. Extract it to a folder, say `C:\users\your-username\Desktop\TCMLobbyBBQ`.  
+3. Open a command prompt and navigate to that folder - i.e. `cd c:\users\your-username\Desktop\TCMLobbyBBQ` 
+4. From that directory, run `python tcm.py`
+5. You will be prompted to choose either `Family` or `Victim`.  Depending on which one you choose, `tcm.py` will automatically watch the screens of your TCM game and navigate the menus automatically to queue you in the appropriate lobby.
+
+## (Optional) Edit tcm.py for max fun!
+Take a look through the script and tweak the timeouts and alerts to your liking!
+
 
 ## (Optional) Create an .env file
 Personally, we like to use Discord Webhooks to alert us when certain actions in TCM happen. Not sure how to configure those?  [Read this](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks).
@@ -23,19 +38,6 @@ WEBHOOK_URL="https://discord.com/api/webhooks/xxx"
 ```
 
 Hint: look at the included `.env.example` file in this repo.
-
-## (Optional) Edit tcm.py for max fun!
-Take a look through the script and tweak the timeouts and alerts to your liking!
-
-## Run tcm.py!
-From a command prompt, run:
-
-```
-python tcm.py
-```
-
-You will be prompted to choose either `Family` or `Victim`.  Depending on which one you choose, `tcm.py` will automatically watch the screens of your TCM game and navigate the menus automatically to queue you in the appropriate lobby.
-
 
 # Common questions/comments
 
