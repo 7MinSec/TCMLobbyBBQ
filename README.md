@@ -1,8 +1,10 @@
+# ARCHIVED
+I stopped playing this game once it went off Game Pass, and recently I heard it won't be developed any further.  Thus I won't be making any further changes to the project, but am leaving it up for archival purposes.  I still think it's a pretty cool script, but seeing as it doesn't play nice with [other screen resolutions](https://github.com/7MinSec/TCMLobbyBBQ/issues/15) it definitely has some serious limitations.  Thanks to those that checked it out.
+
+---
+
 # TCMLobbyBBQ - v1.1
 A script for Texas Chains Saw Massacre *PC players* to use to automatically join the queue again after lobby timeouts, network errors, etc.
-
-# WARNING!
-We've learned the tool has issues if you are not running at 2560x1440 resolution.  We're [working on it](https://github.com/7MinSec/TCMLobbyBBQ/issues/15).
 
 ---
 
