@@ -1,4 +1,4 @@
-# ARCHIVED
+# Update June 14, 2025: this project is now archived
 I stopped playing this game once it went off Game Pass, and recently I heard it won't be developed any further.  Thus I won't be making any further changes to the project, but am leaving it up for archival purposes.  I still think it's a pretty cool script, but seeing as it doesn't play nice with [other screen resolutions](https://github.com/7MinSec/TCMLobbyBBQ/issues/15) it definitely has some serious limitations.  Thanks to those that checked it out.
 
 ---
